@@ -1,0 +1,107 @@
+- Create a git repository
+
+git init
+
+- Add file to be tracked (add file to staging process)
+
+git add <file> //Enter file name without "< >"
+
+- Add ALL files to be tracked (add file to staging process)
+
+git add .
+
+- Add certain types of file to be tracked (add file to staging process)
+
+git add *.file_extension
+
+- Commit changes with commit message screen
+
+git commit
+
+- Commit changes without commit message screen
+
+git commit -m 'commit message'
+
+- Commit changes by skipping staging step
+
+//Can be used together with "-m" to combine the functionalities
+git commit -a
+
+- View commit history
+
+git log
+
+- Create .gitignore file
+
+touch .gitignore
+
+- Create a branch
+
+git branch branch_name
+
+- Go to the branch
+
+git checkout branch_name
+
+- Merge branch with master
+
+//MUST be in the master branch.
+//Use "git status" to check in which branch you are in.
+//The output should be "On branch master"
+git merge branch_name
+
+- Merge Branch A INTO Branch B
+
+//MUST be in Branch B first because it uses pull mechanism.
+git merge Branch A
+
+- Saving an unfinished modification in one branch and move to other branch without being bothered with the unfinished changes on the initial branch
+
+//Before moving to other branch
+git stash
+
+//After coming back to continue working on the unfinished changes
+git stash apply
+
+- View remote repository
+
+git remote
+
+- Create remote repo
+
+//The URL of the remote repo is placed inside the double quotes
+git remote add origin "https://github.com/Qwassi/gitclass.git"
+
+- View remote repository with URL
+
+git remote -v
+
+- Pull/fetch any changes from the remote repo WITHOUT automatically merging with local repo
+
+git fetch origin
+
+
+- Pull/fetch any changes from the remote repo AND automatically merging with local repo
+
+git pull origin
+
+- Push repo from local repo to remote repo
+
+//"origin" is the name of the remote repo.
+//"master" is the branch repo name at the remote server
+git push origin master
+
+- Push a branch from local repo to a branch in remote repo
+
+//If there is no branch on remote repo that has the same name as "remoteBranchName",
+//that branch will be automatically creatred
+git push origin localBranchName:remoteBranchName
+
+- Add additional repo on the remote server
+
+//Eg of URL: http://github.com/repo_name.git
+git remote add repo_name url
+
+- Change editor (ie which editor you want to use for commit info etc.)
+
+git config --global core.editor "vim" //Change the default editor to vim
