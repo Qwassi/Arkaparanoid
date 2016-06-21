@@ -5,7 +5,7 @@ public class Ball : MonoBehaviour
 {
 
 	public Paddle paddle;
-	private bool gameStarted = false;
+	public bool gameStarted = false;
 	private Vector3 paddleVector;
 
 	// Use this for initialization
